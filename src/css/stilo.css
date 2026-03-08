@@ -1,0 +1,229 @@
+/* ============================= */
+/* RESET BÁSICO DA PÁGINA        */
+/* ============================= */
+
+html, body {
+    margin: 0;                          /* remove margens padrão */
+    padding: 0;                         /* remove espaçamentos padrão */
+    overflow-x: hidden;                 /* evita rolagem horizontal */
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 100px;                 /* espaço para o header fixo */
+    background-color: #FFF8DC;
+
+    scroll-behavior: smooth;            /* rolagem suave */
+
+    background-image: url("./imagens/igreja.jpg"); /* imagem de fundo */
+    background-repeat: no-repeat;       /* não repete a imagem */
+    background-size: cover;             /* cobre toda a tela */
+    background-position: center;        /* centraliza a imagem */
+    background-attachment: fixed;       /* fundo fixo */
+}
+
+/* ============================= */
+/* HEADER FIXO                   */
+/* ============================= */
+
+header {
+    width: 100%;
+    position: fixed;                    /* fixa no topo */
+    top: 0;
+    left: 0;
+    z-index: 1000;                      /* fica acima de tudo */
+    background-color: #fff06a;
+    border-bottom: 2px solid #ccc;
+
+    display: flex;                      /* layout flexível */
+    justify-content: space-between;     /* logo de um lado, menu do outro */
+    align-items: center;                /* centraliza verticalmente */
+    
+}
+
+header img {
+    width: 160px;                       /* tamanho do logo */
+    height: auto;                       /* mantém proporção */
+}
+
+/* ============================= */
+/* MENU                          */
+/* ============================= */
+
+nav a {
+    margin: 10px 30px;                   /* espaço entre links */
+    text-decoration: none;              /* remove sublinhado */
+    font-weight: bold;
+    color: #333;
+}
+
+nav a:hover {
+    color: darkred;                     /* efeito hover */
+}
+
+/* ============================= */
+/* CONTAINER GERAL DOS CARDS     */
+/* ============================= */
+
+div {
+    display: inline-flex;               /* mantém seu comportamento original */
+    flex-wrap: wrap;                    /* quebra linha */
+    justify-content: center;             /* centraliza os cards */
+    width: 100%;
+    margin: 20px auto;
+    gap: 20px;                          /* espaço entre cards */
+}
+
+/* ============================= */
+/* CARD DO PRODUTO (SECTION)     */
+/* ============================= */
+
+div section {
+    display: flex;                      /* flexbox */
+    flex-direction: column;             /* empilha tudo em coluna */
+    align-items: center;                /* centraliza horizontalmente */
+
+    width: 40%;
+    flex: 1 1 300px;                    /* responsivo */
+    max-width: 45%;
+
+
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #fffaf5;
+}
+
+/* ============================= */
+/* TÍTULOS (H1, H2, H3)          */
+/* ============================= */
+
+h1 {
+    text-align: center;                 /* centraliza texto */
+    background-color: orange;
+    font-size: 120%;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;                 /* centraliza preço */
+    margin: 10px 0;
+}
+
+h3 {
+    text-align: center;                 /* centraliza "serve X pessoas" */
+    margin: 5px 0;
+}
+
+/* ============================= */
+/* IMAGENS DOS PRODUTOS          */
+/* ============================= */
+
+section img {
+    display: block;                     /* evita inline */
+    margin: 10px auto;                  /* centraliza */
+    border-radius: 20%;
+    box-shadow: 0px 0px 15px 5px;
+    width: 180px;
+    height: 120px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section img:hover {
+    transform: scale(1.1);              /* zoom */
+    box-shadow: 0 4px 25px rgba(0,0,0,0.5);
+}
+
+/* ============================= */
+/* LISTAS                        */
+/* ============================= */
+
+ul {
+    text-align: left;
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style: url("../novaimagem/imagens/icons8-panela-18.png");
+}
+
+/* ============================= */
+/* PREÇO                         */
+/* ============================= */
+
+.preco {
+    list-style: none;                   /* remove marcador */
+    text-align: center;
+    background-color: #DAA520;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* ============================= */
+/* TEXTOS GRANDES (PARÁGRAFOS)   */
+/* ============================= */
+
+p {
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+/* ============================= */
+/* TEXTO ESCONDIDO (HISTÓRIA)    */
+/* ============================= */
+
+h4.texto-escondido {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 0 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+}
+
+h5.gatilho:hover + h4.texto-escondido {
+    max-height: 200px;
+    opacity: 1;
+    padding: 10px;
+}
+
+/* ============================= */
+/* FONTES                        */
+/* ============================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ============================= */
+/* AJUSTE PARA ÂNCORAS           */
+/* ============================= */
+
+p[id] {
+    scroll-margin-top: 150px;            /* evita ficar atrás do header */
+}
+.direitos{
+    font-size: 12px;
+   
+}
+.quem-somos{
+    border: 2px solid black;
+    border-radius: 30%;
+    padding: 20px 40px;
+}
+.caja{
+    border: 2px solid black;
+}
