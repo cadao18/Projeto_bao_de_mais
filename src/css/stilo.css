@@ -128,10 +128,7 @@ section img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-section img:hover {
-    transform: scale(1.1);              /* zoom */
-    box-shadow: 0 4px 25px rgba(0,0,0,0.5);
-}
+
 
 /* ============================= */
 /* LISTAS                        */
@@ -217,4 +214,67 @@ p[id] {
 
 .valor{
     border: 2px solid black;
+}
+/* Container geral para todas as seções */
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;           /* permite quebrar linha */
+    justify-content: center;   /* centraliza horizontal */
+    gap: 20px;                 /* espaço entre cards */
+    padding: 20px;
+}
+
+/* Cada card (section) */
+.container-cards section {
+    display: flex;
+    flex-direction: column;    /* empilha elementos dentro do card */
+    align-items: center;
+    width: 300px;              /* largura fixa igual para todos */
+    min-height: 400px;         /* altura mínima para alinhar */
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fffaf5;
+    border: 2px solid black;
+}
+
+/* Imagem dentro do card */
+section img {
+    width: 100%;               /* ocupa toda a largura do card */
+    height: 180px;             /* altura fixa */
+    object-fit: cover;         /* mantém proporção e corta excesso */
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.2);
+}
+
+/* Texto do título e preço centralizado */
+section h1, section h2, section h3 {
+    text-align: center;
+    margin: 5px 0;
+}
+
+/* Lista dentro do card */
+section ul {
+    padding-left: 20px;
+    text-align: left;
+}
+
+/* Valor do card */
+.valor {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Lista dentro do card */
+section ul {
+    width: 100%;            /* ocupa toda a largura do card */
+    height: 120px;          /* altura fixa para todas */
+    overflow-y: auto;       /* adiciona scroll vertical se passar da altura */
+    padding-left: 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    text-align: left;
+    list-style: url("../novaimagem/imagens/icons8-panela-18.png"); /* ícone personalizado */
 }
