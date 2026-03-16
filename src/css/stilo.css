@@ -364,6 +364,7 @@ padding: 40px; /* Espaçamento interno */
 
 background-color: #FFF8DC; /* Cor de fundo */
 
+opacity: 80%;
 }
 
 /* Estilo do mapa incorporado */
@@ -382,6 +383,6 @@ display:block; /* Ocupa linha inteira */
 
 font-size:12px; /* Fonte pequena */
 
-margin-top:20px; /* Espaço acima */
+margin-top:17px; /* Espaço acima */
 
 }
